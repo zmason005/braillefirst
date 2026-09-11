@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Braille-First Software</title>
+    <title>Braille-First Initiative — Software Designed in Braille, for Braille</title>
+    <meta name="description" content="The Braille-First Initiative builds software with Braille as a foundational language for code and artificial intelligence — including AURA, Client BRF & Web Editor, and Contractable.">
     <link rel="stylesheet" href="https://braillefirst.com/style.css">
+    <style>
+        /* Focus and Error Styling */
+        *:focus-visible {
+            outline: 4px solid #66FCF1 !important;
+            outline-offset: 2px !important;
+        }
+        .error-text {
+            display: block;
+            color: #ff6b6b;
+            font-size: 0.85em;
+            margin-top: 5px;
+            min-height: 1.2em;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #66FCF1;
+            padding: 8px;
+            z-index: 100;
+        }
+        .skip-link:focus { top: 0; }
+    </style>
 </head>
 <body>
 
@@ -12,40 +36,90 @@
 
     <nav class="main-nav" aria-label="Primary">
         <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="software-widgets.html">Software and Widgets</a></li>
-            <li><a href="brailleai.html">BrailleAI (under development)</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="https://braillefirst.com/index.html" aria-current="page">Home</a></li>
+            <li><a href="#software">Software</a></li>
+            <li><a href="#aura">AURA</a></li>
+            <li><a href="#about">About</a></li>
         </ul>
     </nav>
 
-    <header role="banner">
-        <h1>Support Braille-First Development</h1>
+    <header class="hero" role="banner">
+        <h1>Software Designed in Braille, for Braille</h1>
         <div class="custom-content">
-            <p>Advancing Braille as a foundational language for innovation—empowering Braille-literate thinkers to build, solve, and create technologies that serve the world.</p>
+            <p class="hero-subhead">Advancing Braille as a foundational language for innovation, code, and artificial intelligence—empowering Braille-literate thinkers to build, program, and direct technology natively.</p>
+        </div>
+
+        <div class="dot-divider" aria-hidden="true">
+            <span></span><span></span>
+            <span></span><span></span>
+            <span></span><span></span>
+        </div>
+
+        <ul class="badges" aria-label="Focus areas">
+            <li class="badge">Tactile-first computing</li>
+            <li class="badge">Braille AI &amp; code</li>
+            <li class="badge">Open source</li>
+        </ul>
+
+        <div class="cta-group">
+            <a href="#software" class="btn-primary">Explore software</a>
+            <a href="#support" class="btn-secondary">Support development</a>
         </div>
     </header>
 
     <main id="main-content">
-       
-        <section class="card donation-primary" aria-labelledby="quick-donate">
-            <h2 id="quick-donate">One-Time Support</h2>
-            <p>The fastest way to support current development is via Buy Me a Coffee.</p>
-            <a href="https://www.buymeacoffee.com/masonsinc.05" class="btn-bmac">Buy Me a Coffee</a>
+
+        <section class="card section-software" id="software" aria-labelledby="software-title">
+            <h2 id="software-title">Software and Widgets</h2>
+            <p class="section-intro">AURA leads active development. Two earlier pilot projects proved that Braille can drive real interaction design on the web, and both remain in use today.</p>
+
+            <div class="flagship-card" id="aura" aria-labelledby="aura-title">
+                <p class="eyebrow-plain">Flagship project — active development</p>
+                <h3 id="aura-title">AURA</h3>
+                <p>AURA is an accessible AI orchestration interface that connects blind professionals directly to generative AI platforms and enterprise developer environments. It renders every response as stable, structured text: consistent heading levels, predictable reading order, and no layout shifts that break a screen reader's place. Live regions announce updates without interrupting input, and results are grouped so a braille display shows related information on a single line rather than splitting it across cells. AURA sits between a person and their tools — version control, cloud consoles, project trackers — turning verbose interfaces into something a Braille reader can navigate and direct with confidence.</p>
+            </div>
+
+            <div class="pilot-grid">
+                <div class="pilot-card" aria-labelledby="pilot-brf-title">
+                    <p class="eyebrow-plain">Pilot project</p>
+                    <h3 id="pilot-brf-title">Client BRF &amp; Web Editor</h3>
+                    <p>A precision formatting utility for 40-cell braille displays, with client-side auto-save and clean line-wrapping built for embossing-ready output.</p>
+                </div>
+                <div class="pilot-card" aria-labelledby="pilot-contractable-title">
+                    <p class="eyebrow-plain">Pilot project</p>
+                    <h3 id="pilot-contractable-title">Contractable</h3>
+                    <p>An interactive UEB word game that demonstrates native Braille logic and pattern matching directly in the browser.</p>
+                </div>
+            </div>
+
+            <p class="directory-link">
+                <a href="/software-and-widgets">Browse the full software and widgets directory</a>
+            </p>
         </section>
 
-        <section class="card donation-secondary" aria-labelledby="monthly-donate">
-            <h2 id="monthly-donate">Monthly Sponsorship</h2>
-            <p>For those who want to support long-term maintenance and receive GitHub badges.</p>
-            <a href="https://github.com/sponsors/zmason005" class="btn-github">Sponsor on GitHub</a>
+        <section class="custom-content card" id="about" aria-labelledby="about-title">
+            <h2 id="about-title">About the Initiative</h2>
+            <p>The Braille-First Initiative explores Braille as a language for building technology, not only for reading it. Every project starts from Braille-literate design decisions and treats non-visual interaction as the primary path, not a retrofit.</p>
         </section>
 
-        <section class="custom-content card" aria-labelledby="goals-title">
-            <h3 id="goals-title">Current Project Goals</h3>
-            <p>The Braille First Initiative explores how Braille can function as a language for building technology.</p>
+        <section id="support" aria-labelledby="support-title">
+            <h2 id="support-title">Support Development</h2>
+
+            <div class="card donation-primary" aria-labelledby="quick-donate">
+                <h3 id="quick-donate">One-Time Support</h3>
+                <p>The fastest way to support current development is via Buy Me a Coffee.</p>
+                <a href="https://www.buymeacoffee.com/masonsinc.05" class="btn-bmac">Buy Me a Coffee</a>
+            </div>
+
+            <div class="card donation-secondary" aria-labelledby="monthly-donate">
+                <h3 id="monthly-donate">Monthly Sponsorship</h3>
+                <p>For those who want to support long-term maintenance and receive GitHub badges.</p>
+                <!-- Cleaned GitHub Link -->
+                <a href="https://github.com/sponsors/YOUR_GITHUB_HANDLE" class="btn-github">Sponsor on GitHub</a>
+            </div>
         </section>
 
-        <section class="card feedback-section" aria-labelledby="feedback-title">
+        <section class="card feedback-section" id="contact" aria-labelledby="feedback-title">
             <h2 id="feedback-title">Contact Us</h2>
             <form action="https://formspree.io/f/mdayjajr" method="POST" novalidate>
                 <div class="field-container">
@@ -61,19 +135,9 @@
                     <span id="email-error" class="error-text" role="alert" aria-live="polite"></span>
                 </div>
 
-                <div class="field-container">
-                    <label for="message">Your Message:</label>
-                    <textarea 
-                        id="message" 
-                        name="message" 
-                        rows="5" 
-                        required
-                        aria-required="true"
-                        aria-describedby="message-error"
-                        aria-invalid="false"></textarea>
-                    <span id="message-error" class="error-text" role="alert" aria-live="polite"></span>
-                </div>
-
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+               
                 <button type="submit" class="btn-submit">Send Suggestion</button>
             </form>
         </section>
@@ -87,9 +151,6 @@
     <script>
         const emailInput = document.getElementById('user-email');
         const errorDisplay = document.getElementById('email-error');
-        const messageInput = document.getElementById('message');
-        const messageError = document.getElementById('message-error');
-        const contactForm = document.querySelector('.feedback-section form');
 
         emailInput.addEventListener('blur', function() {
             if (this.value === "" || this.checkValidity()) {
@@ -105,44 +166,6 @@
             if (this.checkValidity()) {
                 this.setAttribute('aria-invalid', 'false');
                 errorDisplay.textContent = "";
-            }
-        });
-
-        function validateMessage() {
-            if (messageInput.checkValidity()) {
-                messageInput.setAttribute('aria-invalid', 'false');
-                messageError.textContent = "";
-                return true;
-            } else {
-                messageInput.setAttribute('aria-invalid', 'true');
-                messageError.textContent = "Please enter a message before submitting.";
-                return false;
-            }
-        }
-
-        messageInput.addEventListener('input', function() {
-            if (this.checkValidity()) {
-                this.setAttribute('aria-invalid', 'false');
-                messageError.textContent = "";
-            }
-        });
-
-        contactForm.addEventListener('submit', function(event) {
-            const messageValid = validateMessage();
-            const emailValid = emailInput.value === "" || emailInput.checkValidity();
-
-            if (!emailValid) {
-                emailInput.setAttribute('aria-invalid', 'true');
-                errorDisplay.textContent = "Please include an '@' and a valid domain (e.g., name@example.com).";
-            }
-
-            if (!messageValid || !emailValid) {
-                event.preventDefault();
-                if (!messageValid) {
-                    messageInput.focus();
-                } else {
-                    emailInput.focus();
-                }
             }
         });
     </script>
