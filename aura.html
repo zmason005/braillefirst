@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA - Braille-First</title>
+    <meta name="description" content="AURA is an accessible AI orchestration interface connecting blind professionals to generative AI platforms and enterprise developer environments.">
+    <link rel="stylesheet" href="https://braillefirst.com/style.css">
+    <style>
+        *:focus-visible {
+            outline: 4px solid #66FCF1 !important;
+            outline-offset: 2px !important;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #66FCF1;
+            padding: 8px;
+            z-index: 100;
+        }
+        .skip-link:focus { top: 0; }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Primary">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="software-widgets.html">Software and Widgets</a></li>
+            <li><a href="aura.html" aria-current="page">AURA</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <header role="banner">
+        <h1>AURA</h1>
+        <div class="custom-content">
+            <p>Flagship project — active development</p>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section class="card" aria-labelledby="what-title">
+            <h2 id="what-title">What AURA does</h2>
+            <p>AURA is an accessible AI orchestration interface that connects blind professionals directly to generative AI platforms and enterprise developer environments. It renders every response as stable, structured text: consistent heading levels, predictable reading order, and no layout shifts that break a screen reader's place.</p>
+            <p>Live regions announce updates without interrupting input, and results are grouped so a braille display shows related information on a single line rather than splitting it across cells. AURA sits between a person and their tools — version control, cloud consoles, project trackers — turning verbose interfaces into something a Braille reader can navigate and direct with confidence, not just consume passively.</p>
+        </section>
+
+        <section class="card" aria-labelledby="status-title">
+            <h2 id="status-title">Status</h2>
+            <p>AURA is under active development. A live demo and source access will be linked here as they become available. In the meantime, use the contact form on the <a href="index.html#contact">homepage</a> to ask questions or get updates.</p>
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>© 2026 Braille-First Initiative. Built for the tactile web.</p>
+    </footer>
+
+</body>
+</html>
